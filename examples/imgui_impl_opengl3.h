@@ -64,10 +64,10 @@ IMGUI_IMPL_API void     ImGui_ImplOpenGL3_DestroyDeviceObjects();
 
 // Otherwise try to detect supported Desktop OpenGL loaders..
 #elif defined(__has_include)
-#if __has_include(<GL/glew.h>)
-    #define IMGUI_IMPL_OPENGL_LOADER_GLEW
-#elif __has_include(<glad/glad.h>)
-    #define IMGUI_IMPL_OPENGL_LOADER_GLAD
+#if __has_include(<glad/glad.h>)
+	#define IMGUI_IMPL_OPENGL_LOADER_GLAD
+#elif __has_include(<GL/glew.h>)
+	#define IMGUI_IMPL_OPENGL_LOADER_GLEW
 #elif __has_include(<GL/gl3w.h>)
     #define IMGUI_IMPL_OPENGL_LOADER_GL3W
 #elif __has_include(<glbinding/glbinding.h>)
